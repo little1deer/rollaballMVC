@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cfb50d650ee481ab5d91f9e32586c0f, type: 3}
+  m_Name: EnvironmentSettings
+  m_EditorClassIdentifier: 
+  MaterialWall: {fileID: 2100000, guid: 6f4886a16da082f4da2c7726739da6f9, type: 2}
+  MaterialFloor: {fileID: 2100000, guid: d298ed6da0e798446b9a46c39173e7c7, type: 2}
+  MaterialFinish: {fileID: 2100000, guid: a18cdc30a5e16734698f28d8fb840332, type: 2}
+  _position: {x: 0, y: 0, z: 0}
+  _scaleWallChange: {x: 6, y: 1, z: 0}
+  _scaleLabirintX: 5
+  _scaleLabirintY: 5
