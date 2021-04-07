@@ -24,9 +24,13 @@ namespace RollaBall
         public Transform CreateFinish(string name, Vector3 position,Vector3 scale)
         {
             return new GameObject(name).AddMeshCube().AddMaterial(_environmentData.MaterialFinish).
-                ChangePosition(position).ChangeScale(scale).AddBoxCollider().SetTrigger().SetTag("Finish").transform;
+                ChangePosition(position).ChangeScale(scale).AddBoxCollider().SetTriggerBox().SetTag("Finish").transform;
+        } 
+        public Transform CreateKey(string name,Vector3 pos)
+        {
+            return new GameObject(name).ChangePosition(pos).AddMeshSphere().AddMaterial(_environmentData.MaterialKey).AddBoxCollider().SetTriggerBox().SetTag("Key").transform;
         }
-        public GameObject CreateCell(Vector3 vector3,bool leftEnable,bool bottomEnable, bool exitEnable, bool floorEnable)
+        public GameObject CreateCell(Vector3 vector3,bool leftEnable,bool bottomEnable, bool exitEnable, bool floorEnable, bool keyEnable)
         {
             GameObject cell;
             cell = new GameObject("Cell");
@@ -36,6 +40,7 @@ namespace RollaBall
             var bottomWallPos = new Vector3(0, -1, 0);
             var finishPos = new Vector3(0.5f, 0, 3.5f);
             var finishScale = new Vector3(5, 2, 5);
+            var keyPos = new Vector3(0, -1, 3);
             if (leftEnable)
             {
                 CreateWall("Left Wall", leftWallRot, leftWallPos).SetParent(cell.transform);
@@ -55,6 +60,10 @@ namespace RollaBall
             {
                 CreateFinish("Finish", finishPos,finishScale).SetParent(cell.transform);
             }
+            if (keyEnable)
+            {
+                CreateKey("Key",keyPos).SetParent(cell.transform);
+            }
             cell.transform.position = vector3;
             return cell;
         }
@@ -64,14 +73,14 @@ namespace RollaBall
             GameObject c;
             c = new GameObject("Maze");
             MazeController generatorCell = new MazeController();
-            MazeGeneratorCell[,] maze = generatorCell.GenerateMaze(_environmentData.ScaleLabirintX,_environmentData.ScaleLabirintY);
+            MazeGeneratorCell[,] maze = generatorCell.GenerateMaze(_environmentData.ScaleLabirintX,_environmentData.ScaleLabirintY );
             
             for (int x = 0; x < maze.GetLength(0); x++)
             {
                 for (int y = 0; y < maze.GetLength(1); y++)
                 {
                     Vector3 v = new Vector3(x*CellSize.x,y*CellSize.y,y*CellSize.z);
-                    CreateCell(v, (maze[x, y].WallLeft), (maze[x, y].WallBottom),maze[x,y].Exit,maze[x,y].Floor).transform.parent = c.transform;
+                    CreateCell(v, (maze[x, y].WallLeft), (maze[x, y].WallBottom),maze[x,y].Exit,maze[x,y].Floor, maze[x,y].Key).transform.parent = c.transform;
                 }
             }
             return c.transform;

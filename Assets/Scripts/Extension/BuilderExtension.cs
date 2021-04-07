@@ -9,14 +9,12 @@ namespace RollaBall
             gameObject.name = name;
             return gameObject;
         }
-
-        public static GameObject AddRigidbody(this GameObject gameObject, float mass)
+         public static GameObject AddRigidbody(this GameObject gameObject, float mass)
         {
             var component = gameObject.GetOrAddComponent<Rigidbody>();
             component.mass = mass;
             return gameObject;
         }
-
         public static GameObject AddSphereCollider(this GameObject gameObject)
         {
             gameObject.GetOrAddComponent<SphereCollider>();
@@ -33,7 +31,7 @@ namespace RollaBall
             gameObject.GetComponent<BoxCollider>().center = new Vector3(0,-0.5f,0);
             return gameObject;
         }
-        public static GameObject SetTrigger(this GameObject gameObject)
+        public static GameObject SetTriggerBox(this GameObject gameObject)
         {
             gameObject.GetComponent<BoxCollider>().isTrigger = true;
             return gameObject;
@@ -43,7 +41,6 @@ namespace RollaBall
             gameObject.tag = tag;
             return gameObject;
         }
-        
         public static GameObject AddMaterial(this GameObject gameObject, Material material)
         {
             var component = gameObject.GetOrAddComponent<MeshRenderer>();
@@ -92,7 +89,7 @@ namespace RollaBall
             gameObject.transform.position += n;
             return gameObject;
         }
-
+       
         private static T GetOrAddComponent<T>(this GameObject gameObject) where T : Component
         {
             var result = gameObject.GetComponent<T>();

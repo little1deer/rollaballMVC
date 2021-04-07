@@ -13,9 +13,8 @@ namespace RollaBall
 
         public Transform CreatePlayer()
         {
-            return new GameObject("Player").AddMeshSphere().
-                AddMaterial(_playerData.Material).
-                AddSphereCollider().AddRigidbody(1).transform;
+            return new GameObject("Player").AddMeshSphere().AddMaterial(_playerData.Material).AddSphereCollider()
+                .AddRigidbody(1).AddComponent<PlayerController>().transform;
         }
     }
 }

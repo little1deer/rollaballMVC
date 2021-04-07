@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\Contoller\GameController.cs" />
      <Compile Include="Assets\Scripts\Bonus\BonusInitialization.cs" />
      <Compile Include="Assets\Scripts\Bonus\IGoodBonus.cs" />
+     <Compile Include="Assets\Scripts\Contoller\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Interface\ILateExecute.cs" />
      <Compile Include="Assets\Scripts\Bonus\BonusController.cs" />
      <Compile Include="Assets\Scripts\Data\EnvironmentData.cs" />
@@ -76,6 +77,7 @@
      <Compile Include="Assets\Scripts\UserInput\PCInputHorizontal.cs" />
      <Compile Include="Assets\Scripts\Data\BonusData.cs" />
      <Compile Include="Assets\Scripts\Data\Data.cs" />
+     <Compile Include="Assets\Scripts\Interface\IPlayer.cs" />
      <Compile Include="Assets\Scripts\Contoller\InputController.cs" />
      <Compile Include="Assets\Scripts\Player\IPlayerFactory.cs" />
      <Compile Include="Assets\Scripts\Bonus\InteractiveObject.cs" />
@@ -84,9 +86,10 @@
      <Compile Include="Assets\Scripts\Interface\IExecute.cs" />
      <Compile Include="Assets\Scripts\Contoller\CameraController.cs" />
      <Compile Include="Assets\Scripts\Contoller\Controllers.cs" />
+     <Compile Include="Assets\Scripts\Data\PlayerData.cs" />
      <Compile Include="Assets\Scripts\Interface\IController.cs" />
      <Compile Include="Assets\Scripts\Bonus\IFly.cs" />
-     <Compile Include="Assets\Scripts\Data\PlayerData.cs" />
+     <Compile Include="Assets\Scripts\MiniMap\MiniMap.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/1/projects/rollaballMVC/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

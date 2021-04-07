@@ -15,7 +15,9 @@ MonoBehaviour:
   MaterialWall: {fileID: 2100000, guid: 6f4886a16da082f4da2c7726739da6f9, type: 2}
   MaterialFloor: {fileID: 2100000, guid: d298ed6da0e798446b9a46c39173e7c7, type: 2}
   MaterialFinish: {fileID: 2100000, guid: a18cdc30a5e16734698f28d8fb840332, type: 2}
+  MaterialKey: {fileID: 2100000, guid: 91cc061c2a787ac40b13a306a06b24b8, type: 2}
   _position: {x: 0, y: 0, z: 0}
   _scaleWallChange: {x: 6, y: 1, z: 0}
-  _scaleLabirintX: 5
-  _scaleLabirintY: 5
+  _scaleLabirintX: 70
+  _scaleLabirintY: 70
+  _amountBonuses: 0

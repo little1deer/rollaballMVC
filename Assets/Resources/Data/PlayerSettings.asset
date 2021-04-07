@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e72fd5adefa14b598028166437e45bb5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a7e09bfc6124086a1e81a6f28e9b699, type: 3}
   m_Name: PlayerSettings
   m_EditorClassIdentifier: 
-  Material: {fileID: 2100000, guid: 9bc32351cd8d393418296fca0b8c6026, type: 2}
-  _speed: 4
-  _position: {x: 0, y: 5, z: 2}
+  Material: {fileID: 2100000, guid: eb7bbb45c3b227b46a300c8c825dc1f6, type: 2}
+  _speed: 10
+  _position: {x: 0, y: 0, z: 1}
